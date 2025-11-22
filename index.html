@@ -6,24 +6,36 @@
     <title>Da-Lokal Gelas Calculator</title>
     <style>
       body {
-        background-color: #0047ab; /* Biru */
-        font-family: Arial, sans-serif;
-        color: white;
-        margin: 20px;
-      }
-      h1 {
-        background-color: #fef3d5; /* Krem */
-        color: #0047ab;
-        text-align: center;
-        padding: 10px;
-        border-radius: 15px;
-        margin-bottom: 20px;
-      }
-      /* Style container tetap flex untuk desktop */
-.container {
-  display: flex;
-  justify-content: space-around;
+  background-color: #0047ab;
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 20px;
 }
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 {
+  background-color: #fef3d5;
+  color: #0047ab;
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0; /* supaya h1 tidak mengecil */
+}
+
+.container {
+  width: 300px; /* Atur sesuai kebutuhan */
+  background-color: #fef3d5;
+  color: #0047ab;
+  padding: 15px;
+  border-radius: 10px;
+}
+
 /* Media query untuk layar kecil (mobile) */
 @media (max-width: 600px) {
   .container {
@@ -233,4 +245,5 @@
     </script>
   </body>
 </html>
+
 
