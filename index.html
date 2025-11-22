@@ -19,10 +19,21 @@
         border-radius: 15px;
         margin-bottom: 20px;
       }
-      .container {
-        display: flex;
-        justify-content: space-around;
-      }
+      /* Style container tetap flex untuk desktop */
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+/* Media query untuk layar kecil (mobile) */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    gap: 20px; /* beri jarak antar kotak */
+  }
+  .box {
+    width: 100% !important; /* kotak penuh */
+  }
+}
       .box {
         background-color: #fef3d5; /* Krem */
         padding: 15px;
@@ -222,3 +233,4 @@
     </script>
   </body>
 </html>
+
