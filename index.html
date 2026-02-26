@@ -22,7 +22,6 @@
         .container {
             display: flex;
             justify-content: space-around;
-            flex-wrap: wrap; /* Supaya fleksibel */
             gap: 20px;
         }
         @media (max-width: 600px) {
@@ -31,11 +30,12 @@
         }
         .box {
             background-color: #fef3d5;
-            padding: 15px;
+            padding: 20px;
             border-radius: 10px;
             width: 45%;
             color: #0047ab;
-            font-weight: bold;
+            display: flex;
+            flex-direction: column; /* Memastikan isi kotak tersusun vertikal */
         }
         .title-box {
             background-color: #0047ab;
@@ -49,49 +49,56 @@
         .item {
             display: flex;
             align-items: center;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+            width: 100%; /* Pastikan satu item memakan satu baris penuh */
         }
         .item img {
             width: 50px;
-            margin-right: 10px;
+            margin-right: 15px;
             border-radius: 8px;
         }
-        .label { flex: 1; }
-        .label span:nth-child(1) { color: #0047ab; font-weight: bold; }
+        .label { 
+            flex: 1; 
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .label span:nth-child(1) { color: #0047ab; }
         .label span:nth-child(2) { color: #ff7f50; }
+        
         .buttons { display: flex; align-items: center; }
         .btn {
             border: 2px solid #0047ab;
-            border-radius: 15px;
+            border-radius: 50%; /* Bulat sempurna */
             background-color: white;
             color: #0047ab;
             font-weight: bold;
             cursor: pointer;
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            line-height: 26px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             user-select: none;
             margin: 0 5px;
         }
         .count {
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
             border: 2px solid #0047ab;
-            border-radius: 15px;
+            border-radius: 50%;
             text-align: center;
             font-weight: bold;
-            line-height: 30px;
+            line-height: 32px;
             color: #0047ab;
             background-color: white;
         }
         .total-box {
-            margin-top: 20px;
+            margin-top: auto; /* Mendorong total ke paling bawah */
             background-color: #0047ab;
             color: white;
             font-weight: bold;
             font-size: 1.2em;
-            padding: 10px;
+            padding: 12px;
             border-radius: 10px;
             text-align: center;
         }
@@ -103,8 +110,9 @@
     <div class="container">
         <div class="box">
             <div class="title-box">Gelas Fisik</div>
+            
             <div class="item">
-                <img src="gelas.png" alt="Large" />
+                <img src="gelas.png" alt="L">
                 <div class="label"><span>L</span>-<span>arge</span></div>
                 <div class="buttons">
                     <div class="btn" onclick="decrement('fisikLarge')">-</div>
@@ -112,8 +120,9 @@
                     <div class="btn" onclick="increment('fisikLarge')">+</div>
                 </div>
             </div>
+
             <div class="item">
-                <img src="gelas.png" alt="Regular" />
+                <img src="gelas.png" alt="R">
                 <div class="label"><span>R</span>-<span>eguler</span></div>
                 <div class="buttons">
                     <div class="btn" onclick="decrement('fisikReguler')">-</div>
@@ -121,8 +130,9 @@
                     <div class="btn" onclick="increment('fisikReguler')">+</div>
                 </div>
             </div>
+
             <div class="item">
-                <img src="gelas.png" alt="Hot" />
+                <img src="gelas.png" alt="H">
                 <div class="label"><span>H</span>-<span>ot</span></div>
                 <div class="buttons">
                     <div class="btn" onclick="decrement('fisikHot')">-</div>
@@ -130,8 +140,9 @@
                     <div class="btn" onclick="increment('fisikHot')">+</div>
                 </div>
             </div>
+
             <div class="item">
-                <img src="gelas.png" alt="Injection" />
+                <img src="gelas.png" alt="I">
                 <div class="label"><span>I</span>-<span>njection</span></div>
                 <div class="buttons">
                     <div class="btn" onclick="decrement('fisikInjection')">-</div>
@@ -139,13 +150,15 @@
                     <div class="btn" onclick="increment('fisikInjection')">+</div>
                 </div>
             </div>
+
             <div class="total-box" id="totalFisik">Total : 0</div>
         </div>
 
         <div class="box">
             <div class="title-box">Gelas Terjual</div>
+            
             <div class="item">
-                <img src="gelas.png" alt="Large" />
+                <img src="gelas.png" alt="L">
                 <div class="label"><span>L</span>-<span>arge</span></div>
                 <div class="buttons">
                     <div class="btn" onclick="decrement('terjualLarge')">-</div>
@@ -153,8 +166,9 @@
                     <div class="btn" onclick="increment('terjualLarge')">+</div>
                 </div>
             </div>
+
             <div class="item">
-                <img src="gelas.png" alt="Regular" />
+                <img src="gelas.png" alt="R">
                 <div class="label"><span>R</span>-<span>eguler</span></div>
                 <div class="buttons">
                     <div class="btn" onclick="decrement('terjualReguler')">-</div>
@@ -162,8 +176,9 @@
                     <div class="btn" onclick="increment('terjualReguler')">+</div>
                 </div>
             </div>
+
             <div class="item">
-                <img src="gelas.png" alt="Hot" />
+                <img src="gelas.png" alt="H">
                 <div class="label"><span>H</span>-<span>ot</span></div>
                 <div class="buttons">
                     <div class="btn" onclick="decrement('terjualHot')">-</div>
@@ -171,8 +186,9 @@
                     <div class="btn" onclick="increment('terjualHot')">+</div>
                 </div>
             </div>
+
             <div class="item">
-                <img src="gelas.png" alt="Injection" />
+                <img src="gelas.png" alt="I">
                 <div class="label"><span>I</span>-<span>njection</span></div>
                 <div class="buttons">
                     <div class="btn" onclick="decrement('terjualInjection')">-</div>
@@ -180,6 +196,7 @@
                     <div class="btn" onclick="increment('terjualInjection')">+</div>
                 </div>
             </div>
+
             <div class="total-box" id="totalTerjual">Total : 0</div>
         </div>
     </div>
@@ -203,19 +220,6 @@
 
         function updateTotal() {
             // Kalkulasi Fisik
-            let fL = parseInt(document.getElementById("fisikLarge").textContent);
-            let fR = parseInt(document.getElementById("fisikReguler").textContent);
-            let fH = parseInt(document.getElementById("fisikHot").textContent);
-            let fI = parseInt(document.getElementById("fisikInjection").textContent);
-            document.getElementById("totalFisik").textContent = "Total : " + (fL + fR + fH + fI);
-
-            // Kalkulasi Terjual
-            let tL = parseInt(document.getElementById("terjualLarge").textContent);
-            let tR = parseInt(document.getElementById("terjualReguler").textContent);
-            let tH = parseInt(document.getElementById("terjualHot").textContent);
-            let tI = parseInt(document.getElementById("terjualInjection").textContent);
-            document.getElementById("totalTerjual").textContent = "Total : " + (tL + tR + tH + tI);
-        }
-    </script>
-</body>
-</html>
+            let fL = parseInt(document.getElementById("fisikLarge").textContent) || 0;
+            let fR = parseInt(document.getElementById("fisikReguler").textContent) || 0;
+            let
