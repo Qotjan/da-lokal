@@ -227,7 +227,10 @@
         let fisikHot = parseInt(
           document.getElementById("fisikHot").textContent
         );
-        let totalFisik = fisikLarge + fisikReguler + fisikHot;
+        let fisikInjection = parseInt(
+          document.getElementById("fisikInjection").textContent
+        );
+        let totalFisik = fisikLarge + fisikReguler + fisikHot + fisikInjection;
         document.getElementById("totalFisik").textContent =
           "Total : " + totalFisik;
 
@@ -241,13 +244,17 @@
         let terjualHot = parseInt(
           document.getElementById("terjualHot").textContent
         );
-        let totalTerjual = terjualLarge + terjualReguler + terjualHot;
+        let terjualHot = parseInt(
+          document.getElementById("terjualInjection").textContent
+        );
+        let totalTerjual = terjualLarge + terjualReguler + terjualHot + terjualInjection;
         document.getElementById("totalTerjual").textContent =
           "Total : " + totalTerjual;
       }
     </script>
   </body>
 </html>
+
 
 
 
