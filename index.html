@@ -222,4 +222,17 @@
             // Kalkulasi Fisik
             let fL = parseInt(document.getElementById("fisikLarge").textContent) || 0;
             let fR = parseInt(document.getElementById("fisikReguler").textContent) || 0;
-            let
+            let fH = parseInt(document.getElementById("fisikHot").textContent) || 0;
+            let fI = parseInt(document.getElementById("fisikInjection").textContent) || 0;
+            document.getElementById("totalFisik").textContent = "Total : " + (fL + fR + fH + fI);
+
+            // Kalkulasi Terjual
+            let tL = parseInt(document.getElementById("terjualLarge").textContent) || 0;
+            let tR = parseInt(document.getElementById("terjualReguler").textContent) || 0;
+            let tH = parseInt(document.getElementById("terjualHot").textContent) || 0;
+            let tI = parseInt(document.getElementById("terjualInjection").textContent) || 0;
+            document.getElementById("totalTerjual").textContent = "Total : " + (tL + tR + tH + tI);
+        }
+    </script>
+</body>
+</html>
